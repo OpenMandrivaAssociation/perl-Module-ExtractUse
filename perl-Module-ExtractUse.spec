@@ -14,6 +14,7 @@ Source:         http://www.cpan.org/modules/by-module/Module/%{module}-%{version
 %if %{mdkversion} < 1010
 BuildRequires:  perl-devel
 %endif
+BuildRequires:  perl-version
 BuildRequires:  perl(Module::Build)
 BuildRequires:  perl(Test::NoWarnings)
 BuildRequires:  perl(Test::Deep)
