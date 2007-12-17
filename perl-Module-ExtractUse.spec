@@ -21,7 +21,6 @@ BuildRequires:  perl(Test::Deep)
 BuildRequires:  perl(Parse::RecDescent)
 BuildRequires:  perl(Pod::Strip)
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description 
 Module::ExtractUse is basically a Parse::RecDescent grammar to parse Perl code.
