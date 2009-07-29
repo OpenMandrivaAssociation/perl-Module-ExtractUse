@@ -1,16 +1,16 @@
-%define module  Module-ExtractUse
-%define name    perl-%{module}
-%define version 0.23
-%define release %mkrel 2
+%define upstream_name    Module-ExtractUse
+%define upstream_version 0.23
 
-Name:           %{name}
-Version:        %{version}
-Release:        %{release}
-Summary:        Find out what modules are used 
-License:        GPL or Artistic
-Group:          Development/Perl
-Url:            http://search.cpan.org/dist/%{module}
-Source:         http://www.cpan.org/modules/by-module/Module/%{module}-%{version}.tar.bz2
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
+Summary:    Find out what modules are used 
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 BuildRequires:  perl-devel
 %endif
@@ -21,7 +21,7 @@ BuildRequires:  perl(Test::Deep)
 BuildRequires:  perl(Parse::RecDescent)
 BuildRequires:  perl(Pod::Strip)
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}
+BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
 
 %description 
 Module::ExtractUse is basically a Parse::RecDescent grammar to parse Perl code.
@@ -31,7 +31,7 @@ used by the parsed code.
 "Usage" is defined by either calling use or require
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -52,5 +52,3 @@ rm -rf %{buildroot}
 %doc Changes README
 %{perl_vendorlib}/Module
 %{_mandir}/*/*
-
-
