@@ -1,15 +1,15 @@
 %define upstream_name    Module-ExtractUse
-%define upstream_version 0.23
+%define upstream_version 0.32
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	1
 
 Summary:	Find out what modules are used 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://www.cpan.org/modules/by-module/Module/Module-ExtractUse-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl-version
@@ -90,4 +90,5 @@ make test
 
 * Tue Nov 28 2006 Guillaume Rousse <guillomovitch@mandriva.org> 0.18-1mdv2007.1
 - first mdv release
+
 

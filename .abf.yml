@@ -1,2 +1,4 @@
+removed_sources:
+  Module-ExtractUse-0.23.tar.bz2: d371b9586de65f0393364979442bb38698fc13d0
 sources:
-  "Module-ExtractUse-0.23.tar.bz2": d371b9586de65f0393364979442bb38698fc13d0
+  Module-ExtractUse-0.32.tar.gz: 1a0b7291be5f5995b9c381f5d9d6ba638518be18
