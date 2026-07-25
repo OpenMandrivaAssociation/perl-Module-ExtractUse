@@ -1,16 +1,16 @@
 %define upstream_name    Module-ExtractUse
-%define upstream_version 0.33
+%define upstream_version 0.345
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Find out what modules are used 
 
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://github.com/domm/Module-ExtractUse
+Source0:	https://cpan.metacpan.org/authors/id/D/DO/DOMM/Module-ExtractUse-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl-version
