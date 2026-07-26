@@ -1,16 +1,14 @@
 %define upstream_name    Module-ExtractUse
-%define upstream_version 0.345
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.345
+Release:	2
 
 Summary:	Find out what modules are used 
 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/domm/Module-ExtractUse
-Source0:	https://cpan.metacpan.org/authors/id/D/DO/DOMM/Module-ExtractUse-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/D/DO/DOMM/Module-ExtractUse-%{version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl-version
@@ -32,7 +30,7 @@ used by the parsed code.
 "Usage" is defined by either calling use or require
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Build.PL installdirs=vendor
